@@ -25,6 +25,17 @@ end
 require("packer").startup(function(use)
   use "wbthomason/packer.nvim"
   
+  use {
+  "nvim-neo-tree/neo-tree.nvim",
+  branch = "v3.x",
+  requires = {
+    "nvim-lua/plenary.nvim",
+    "MunifTanjim/nui.nvim",
+    "nvim-tree/nvim-web-devicons", -- optional, recommended
+  },
+  -- lazy = false is default in packer, so no need to specify
+}
+
   if packer_bootstrap then
     require("packer").sync()
   end
