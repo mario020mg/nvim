@@ -1,4 +1,3 @@
--- lua/plugins/codecompanion.lua
 return {
   "olimorris/codecompanion.nvim",
   dependencies = {
@@ -7,24 +6,27 @@ return {
   },
   config = function()
     require("codecompanion").setup({
-      interactions = {
-        chat = {
-          adapter = {
-            name = "openai",
-            api_key = os.getenv("OPENAI_API_KEY"),
-          },
+      adapters = {
+        openai = {
+          api_key = os.getenv("OPENAI_API_KEY"),
         },
-        inline = {
-          adapter = "openai",
-        },
-        cmd = {
-          adapter = "openai",
-        },
+      },
+      strategies = {
+        chat = { adapter = "openai" },
+        inline = { adapter = "openai" },
+        cmd = { adapter = "openai" },
       },
       opts = {
         log_level = "DEBUG",
       },
     })
-  end,
+
+    -- Keymap to open CodeCompanion chat in a floating window
+    vim.keymap.set("n", "<leader>cc", function()
+      require("codecompanion").chat({
+        window_opts = { layout = "float", width = 80, height = 15 }
+      })
+    end, { desc = "Open CodeCompanion Chat" })  -- <--- close the keymap
+  end,  -- close config function
 }
 
