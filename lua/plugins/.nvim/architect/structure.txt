@@ -1,0 +1,34 @@
+# File Structure
+
+task_manager/
+|-- main.py
+|-- task_manager/
+|   |-- __init__.py
+|   |--_handler.py
+|-- database/
+|   |-- tasks.db
+|-- requirements.txt
+|-- README.md
+
+# File Descriptions
+
+## database/tasks.db
+SQLite database to store tasks
+
+## requirements.txt
+Lists dependencies, if any
+
+## task_manager/
+Contains core application modules
+
+## main.py
+Entry point for the task manager application
+
+## task_manager/__init__.py
+Initializes the task manager package
+
+## task_manager/task_handler.py
+Logic for adding, viewing, and marking tasks
+
+## README.md
+Project documentation

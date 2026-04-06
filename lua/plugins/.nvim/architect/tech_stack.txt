@@ -1,0 +1,6 @@
+# Tech Stack
+Language: Python
+Framework: 
+Database: SQLite
+Infrastructure: Local execution
+Other: 

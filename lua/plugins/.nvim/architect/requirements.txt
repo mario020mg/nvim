@@ -1,0 +1,9 @@
+# Functional Requirements
+1. Add tasks.
+2. View tasks.
+3. Mark tasks as complete.
+
+# Non-Functional Requirements
+1. User-friendly interface.
+2. Fast performance.
+3. Lightweight design.
